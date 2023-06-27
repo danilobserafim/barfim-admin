@@ -10,6 +10,7 @@ import { ClientesService } from 'src/app/services/clientes.service';
 export class ClienteComponent implements OnInit {
   page : any;
   cliente : any;
+  noPage: boolean = false
   @Input() modal:any;
   toggleModal:any = ()=>{
     this.modal = !this.modal
@@ -25,6 +26,9 @@ export class ClienteComponent implements OnInit {
       this.service.getCliente(this.page).subscribe({
         next: (data: any) =>{
           this.cliente = data
+        },
+        error: ()=>{
+          this.noPage = true
         }
       })
       

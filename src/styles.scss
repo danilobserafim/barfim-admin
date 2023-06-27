@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @keyframes fade {
-  from{opacity: 0.5;}
+  from{opacity: 0;}
   to{opacity: 1;}
 }
 *{
@@ -8,7 +8,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    animation: fade 0.3s linear;
+    animation: fade 0.1s linear;
+    
 }
 :root {
     //--mainColor: #192727;

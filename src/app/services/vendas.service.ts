@@ -12,11 +12,11 @@ export class VendasService {
   
   constructor(private http: HttpClient) {}
   getVendas(): Observable<any> {
-    this.data = this.http.get(`http://localhost:3000/vendas`);
+    this.data = this.http.get(`https://backend-barfim-node.onrender.com/vendas`);
     return this.data;
   }
   getVenda(id:any): Observable<any>{
-    this.data = this.http.get(`http://localhost:3000/vendas/${id}`);
+    this.data = this.http.get(`https://backend-barfim-node.onrender.com/vendas/${id}`);
     return this.data;
   }
 }

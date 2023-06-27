@@ -20,9 +20,9 @@
 
     </div>
 </div>
-<div id="NoPage" *ngIf="!cliente">
+<div id="NoPage" *ngIf="noPage">
     <app-btn-back />
-    <h1>Nenhuma compra efetuada palo cliente</h1>
+    <h1>Nenhuma compra efetuada pelo cliente</h1>
     <app-modal-cadastrarvenda  *ngIf="modal"/>
     <button (click)="toggleModal()">Nova venda</button>
 </div>
