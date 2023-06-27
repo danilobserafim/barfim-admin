@@ -11,6 +11,7 @@ Painel administrativo para uma loja virtual
 • Abrir o CLI de sua preferência (recomendo o Git Bash).
 • Executar "npm install" para instalar os pacotes.
 • Executar "npm run start" para executar o projeto.
+• Acessar http://localhost:4200
 
 ## Modo de uso
 Acesse: https://danilobserafim.github.io/barfim-admin/
