@@ -1,0 +1,19 @@
+<div id="container">
+  <form (ngSubmit)="postCliente()" #formDir='ngForm'>
+    <h2>Novo cliente</h2>
+
+    <label for="nome">nome</label>
+    <input type="text" name="nome" id="nome" placeholder="Nome" #name="ngModel" [(ngModel)]="clienteForm.nome"/>
+
+    <label for="telefone">Telefone</label>
+    <input type="text" name="telefone" id="telefone" placeholder="Telefone" #telefone="ngModel" [(ngModel)]="clienteForm.telefone" />
+
+    <label for="email">email</label>
+    <input type="text" name="email" id="email" placeholder="E-mail" #email="ngModel" [(ngModel)]="clienteForm.email" />
+
+    <input type="submit" value="Cadastrar">
+
+    <a routerLink="../../clientes">Cancelar</a>
+  </form>
+</div>
+ 

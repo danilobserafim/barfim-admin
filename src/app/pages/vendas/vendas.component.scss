@@ -1,0 +1,39 @@
+#main{
+    margin: 32px 16px;
+    margin-left: 316px;
+    display: flex;
+    flex-direction: column;
+    h1{
+        margin: 100px 0 32px 0;
+    }
+
+    a{
+        color: gray;
+        text-decoration: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #tag{
+        padding: 16px 32px;
+        min-width: 200px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.267);
+        transition: 0.3s;
+        border-radius: 10px;
+        &:hover{
+            background-color: rgb(243, 243, 243);
+            color: var(--mainColor);
+            
+        }
+        p{
+            width: 20%;
+        }
+    }
+}
+@media (max-width: 1000px) {
+    #main{
+        margin: 32px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,169 @@
+:root {
+    --mainColor: #192727;
+    --secondaryColor: #008686;
+  }
+#main{
+    height: calc(100vh - 112px);
+    margin-left: 300px;
+}
+.flex-div{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+  #first-fold {
+    display: flex;
+    gap: 32px;
+    justify-content: space-around;
+    align-items: center;
+    background-position: center;
+  }
+  #first-fold article {
+    width: 40%;
+    margin: 64px auto;
+  
+    padding: 64px 32px;
+  }
+  #first-fold img{
+      width: 40%;
+      height: 100vh;
+  }
+  #first-fold article h3 {
+    font-size: 3rem;
+    color: var(--mainColor);
+    text-align: center;
+  }
+  #first-fold article p {
+    font-size: 2rem;
+    margin: 16px 0;
+    color: var(--mainColor);
+    font-weight: 600;
+  }
+
+  
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 64px 0;
+    padding-top: 160px;
+  }
+  #cards .card {
+    /* background-color: var(--mainColor); */
+    width: 38%;
+    border: 1px solid #a7a7a742;
+    padding: 64px 32px;
+    cursor: pointer;
+    transition: 0.3s;
+    min-height: 400px;
+    min-width: 400px;
+  }
+  #relogios {
+    background: linear-gradient(to bottom right, black, transparent),
+      url(../../../assets/images/cards/relogio.jpg);
+    background-size: cover;
+    background-position: bottom;
+  }
+  #colares {
+    background: linear-gradient(to bottom right, black, transparent),
+      url(../../../assets/images/cards/colar.jpg);
+    background-size: cover;
+    background-position: bottom;
+  }
+  #pulseiras {
+      background: linear-gradient(to bottom right, black, transparent),
+        url(../../../assets/images/cards/pulseira.jpg);
+      background-size: cover;
+      background-position: bottom;
+  }
+  #aneis {
+    background: linear-gradient(to bottom right, black, transparent),
+      url(../../../assets/images/cards/anel.jpg);
+    background-size: cover;
+    background-position: bottom;
+  }
+  #cards .card:hover {
+    border: 1px solid var(--mainColor);
+    border-radius: 10px;
+    background: linear-gradient(to right bottom,  var(--mainColor) 60%, var(--secondaryColor));
+  }
+  #cards .card:hover p {
+    color: var(--secondaryColor);
+    display: block;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+  }
+  #cards .card h3 {
+    color: white;
+    font-size: 3rem;
+  }
+  #cards .card p {
+    font-size: 1.1rem;
+    width: 90%;
+    margin: 32px 0;
+    display: none;
+  }
+  #about{
+    max-width: 1300px;
+    margin: 0 auto 64px auto;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding-top: 128px;
+  }
+  #about h3{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 64px;
+    color: var(--mainColor);
+  }
+  #about img{
+    width: 100%;
+    min-width: 350px;
+  }
+  #about p{
+    color: rgb(105, 105, 105);
+    margin: 16px 0 16px 16px;
+    font-size: 1.5rem;
+    
+  }
+  footer {
+    margin-top: 64px;
+    padding-top: 32px;
+    background-color: var(--mainColor);
+    text-align: center;
+  }
+  footer h4{
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: var(--secondaryColor);
+  }
+  #social{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+  }
+  footer small {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    margin-top: 64px;
+  }
+  footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer img{
+    height: 48px;
+    width: 48px;
+    margin: 8px;
+  }

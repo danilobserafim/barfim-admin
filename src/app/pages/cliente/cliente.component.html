@@ -1,0 +1,28 @@
+<div id="main" *ngIf="cliente">
+    <app-btn-back />
+    <div>
+
+        <h3>{{cliente.nome}}</h3>
+        <p>{{cliente.email}}</p>
+        <p>{{cliente.telefone}}</p>
+        <hr>
+
+        <div *ngFor="let compra of cliente.compras" class="tag">
+            <a [routerLink]="['../../vendas', compra.venda_id]"  >
+                <p>{{compra.venda_id}} - {{compra.data}}</p>
+                <p>{{compra.valor}}</p>
+                <p>-</p>
+                <p>{{compra.desconto}}</p>
+                <p>=</p>
+                <p>{{compra.total}}</p>
+            </a>
+        </div>
+
+    </div>
+</div>
+<div id="NoPage" *ngIf="!cliente">
+    <app-btn-back />
+    <h1>Nenhuma compra efetuada palo cliente</h1>
+    <app-modal-cadastrarvenda  *ngIf="modal"/>
+    <button (click)="toggleModal()">Nova venda</button>
+</div>

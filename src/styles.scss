@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@keyframes fade {
+  from{opacity: 0.5;}
+  to{opacity: 1;}
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    animation: fade 0.3s linear;
+}
+:root {
+    //--mainColor: #192727;
+    --mainColor: #006969;
+    --secondaryColor: #00bfc5;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  html::-webkit-scrollbar {
+    background-color: var(--secondaryColor);   
+    width: 8px;
+  }
+  html::-webkit-scrollbar-thumb {
+    background-color: var(--mainColor);
+    border-radius: 20px;
+  }
+  #logo{
+      height: 128px;
+      background-color: #192727;
+      padding: 8px;
+      border-radius: 100%;
+      margin: 0 auto 32px auto;
+  }

@@ -1,0 +1,61 @@
+@keyframes showSlow {
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+    
+}
+#main{
+    max-width: 600px;
+    margin: 32px auto;
+
+
+    hr{
+        margin: 32px 0;
+    }
+    .tag{
+        margin: 16px 0;
+        min-width: 300px;
+        border: 1px solid rgba(128, 128, 128, 0.267);
+        border-radius: 10px;
+        transition: 0.3s;
+        &:hover{
+            border-color: gray;
+            box-shadow: 1px 1px 3px gray;
+            color: black;
+        }
+        h3{
+            color: black;
+        }
+        a{
+            padding: 16px 32px;
+            color: black;
+            text-decoration: none;
+            display: flex;
+            gap: 32px;
+        }
+    }
+}
+
+#NoPage{
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 64px;
+    animation: showSlow 0.1s;
+    button{
+        width: 100%;
+        padding: 8px;
+        font-size: 1.2rem;
+        margin-top: 32px;
+        background-color: #008686;
+        color: white;
+        border: 1px solid transparent;
+        cursor: pointer;
+        position: relative;
+        &:hover{
+            filter: brightness(1.1);
+        }
+        &:active{
+            top: 1px;
+        }
+    }
+}

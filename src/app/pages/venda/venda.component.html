@@ -1,0 +1,23 @@
+<div id="container">
+    <app-btn-back />
+    <br>
+
+    <h3>{{venda.Cliente}}</h3>
+    <p>{{venda.email}}</p>
+    <p>{{venda.telefone}}</p>
+    <hr>
+    <h2>Compra N°: {{venda.venda_id}}</h2>
+    <small>{{venda.data}}</small>
+    
+    <div id="item" *ngFor="let item of venda.carrinho">
+        <h4>{{item.nome}}</h4>
+        <p>{{item.descricao}}</p>
+        <p>{{item.valor}}</p>
+    </div>
+    <hr>
+    <span>
+        <p>Valor <br>{{venda.venda}}</p>
+    <p>Desconto <br>{{venda.desconto}}</p>
+    <p>Total <br>{{venda.total}}</p>
+    </span>
+</div>
