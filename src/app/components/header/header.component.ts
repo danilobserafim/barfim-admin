@@ -20,6 +20,10 @@ export class HeaderComponent implements AfterContentChecked {
     let carrinho = JSON.parse(localStorage.getItem("carrinho") || "")
     this.carrinho.splice(index, 1)
     localStorage.setItem('carrinho',JSON.stringify(this.carrinho))
+    if (index === 0) {
+      this.mostrarCarrinho = false
+    } 
+      
   }
   
 }

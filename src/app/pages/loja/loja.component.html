@@ -1,6 +1,5 @@
 <div id="container">
     <app-title title="Loja" />
-    <hr>
     <div id="produtos">
         <div class="tag-produto" *ngFor="let produto of produtos">
             <div>
@@ -12,7 +11,7 @@
                     <p>R${{produto.valor_produto}}</p>
                     <p>Quantidade: {{produto.quantidade_produto}}</p>
                 </div>
-                <button (click)="addCarrinho(produto.id_produto, produto.nome_produto)">adicionar ao carrinho</button>
+                <button (click)="addCarrinho(produto.id_produto, produto.nome_produto)"><img src="./assets/icon-plus-white.png" alt=""></button>
             </div>
         </div>
     </div>

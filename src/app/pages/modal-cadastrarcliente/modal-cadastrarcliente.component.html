@@ -3,13 +3,13 @@
     <h2>Novo cliente</h2>
 
     <label for="nome">nome</label>
-    <input type="text" name="nome" id="nome" placeholder="Nome" #name="ngModel" [(ngModel)]="clienteForm.nome"/>
+    <input type="text" name="nome" id="nome" placeholder="Nome Completo" #name="ngModel" [(ngModel)]="clienteForm.nome"/>
 
     <label for="telefone">Telefone</label>
-    <input type="text" name="telefone" id="telefone" placeholder="Telefone" #telefone="ngModel" [(ngModel)]="clienteForm.telefone" />
+    <input type="text" name="telefone" id="telefone" placeholder="00 00000-0000" #telefone="ngModel" [(ngModel)]="clienteForm.telefone" />
 
     <label for="email">email</label>
-    <input type="text" name="email" id="email" placeholder="E-mail" #email="ngModel" [(ngModel)]="clienteForm.email" />
+    <input type="text" name="email" id="email" placeholder="Exemplo@email.com" #email="ngModel" [(ngModel)]="clienteForm.email" />
 
     <input type="submit" value="Cadastrar">
 

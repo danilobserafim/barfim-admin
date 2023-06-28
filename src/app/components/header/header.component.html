@@ -5,11 +5,11 @@
         <a routerLink="vendas">VENDAS</a>
         <a routerLink="clientes">CLIENTES</a>
     </nav>
-    <button id="carrinho" (click)="toggleCarrinho()">
+    <button id="carrinho" (click)="toggleCarrinho()"  *ngIf="carrinho[0]">
         <img src="./assets/cart.png" alt="">
         <p>{{range || 0}}</p>
     </button>
-    <div id="itens" *ngIf="mostrarCarrinho">
+    <div id="itens" *ngIf="mostrarCarrinho && carrinho[0]">
         <div *ngIf="!carrinho[0]">
             <h2>Nada por aqui</h2>
             <p>Comece a comprar agora</p>

@@ -26,15 +26,27 @@
             margin: 8px 0 16px 0;
         }
         button{
-
-            background-color: var(--mainColor);
-            color: white;
-            padding: 8px;
-            font-size: 1.3rem;
             width: 100%;
+            padding: 8px 8px  2px 8px ;
+            font-size: 1.1rem;
             border-radius: 10px;
             border: none;
             position: relative;
+            cursor: pointer;
+            border: 1px solid var(--secondaryColor);
+            color: var(--secondaryColor);
+            background-color: var(--secondaryColor);
+            filter: grayscale(0.7);
+            img{
+                height: 24px;
+                width: 24px;
+            }
+            
+            &:hover{
+                color: white;
+                filter: grayscale(0);
+
+            }
             &:active{
                 top: 1px;
             }

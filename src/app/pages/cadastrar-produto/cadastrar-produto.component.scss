@@ -32,9 +32,9 @@
             text-align: left;
             width: 100%;
             color: gray;
-            display: none;
+            margin: 16px 0 8px 0;
         }
-        input{
+        input, select{
             padding: 8px;
             width: 100%;
             border-radius: 4px;
@@ -46,6 +46,9 @@
                 border: 1px solid gray;
             }
 
+        }
+        select{
+            display: flex;
         }
         input[type=submit]{
             color: white;

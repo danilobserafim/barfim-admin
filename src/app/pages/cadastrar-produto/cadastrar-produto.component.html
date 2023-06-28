@@ -13,6 +13,7 @@
 
     <label for="categoria">Categorias</label>
     <select name="categoria" id="categoria" #categoria="ngModel" [(ngModel)]="produtoForm.categoria" >
+      <option value="0" selected>Selecione</option>
       <option *ngFor="let categoria of categorias" value="{{categoria.id_categoria}}">{{categoria.nome_categoria}}</option>
     </select>
 
