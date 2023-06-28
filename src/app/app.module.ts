@@ -17,6 +17,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TitleComponent } from './components/title/title.component';
 import { LojaComponent } from './pages/loja/loja.component';
 import { CommonModule } from '@angular/common';
+import { CadastrarProdutoComponent } from './pages/cadastrar-produto/cadastrar-produto.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CommonModule } from '@angular/common';
     ModalCadastrarvendaComponent,
     TitleComponent,
     LojaComponent,
+    CadastrarProdutoComponent,
   ],
   imports: [
     CommonModule,

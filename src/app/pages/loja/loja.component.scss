@@ -3,4 +3,63 @@
     margin-left: 316px;
     display: flex;
     flex-direction: column;
+#produtos{
+    display: flex;
+
+    .tag-produto{
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 250px;
+        margin: 16px;
+        box-shadow: 0 4px 50px 1px rgba(128, 128, 128, 0.445);
+        border-radius: 10px;
+      
+        #inline{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 64px;
+        }
+        p{
+            margin: 8px 0 16px 0;
+        }
+        button{
+
+            background-color: var(--mainColor);
+            color: white;
+            padding: 8px;
+            font-size: 1.3rem;
+            width: 100%;
+            border-radius: 10px;
+            border: none;
+            position: relative;
+            &:active{
+                top: 1px;
+            }
+
+        }
+    }
+}
+#new{
+    position: fixed;
+    bottom: 128px;
+    right: 160px;
+    transition: 0.1s;
+    
+    background-color: var(--mainColor);
+    border-radius: 100px;
+    height: 63px;
+
+    &:hover{
+        filter: brightness(1.3);   
+        box-shadow: 1px 1px gray; 
+    }
+    img{
+        padding: 8px;
+        width: 62px;
+
+    }
+}
 }

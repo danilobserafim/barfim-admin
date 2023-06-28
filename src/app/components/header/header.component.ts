@@ -8,7 +8,7 @@ import { Component, AfterContentChecked } from '@angular/core';
 export class HeaderComponent implements AfterContentChecked {
   carrinho:any;
   range: number = 0;
-  mostrarCarrinho: boolean = true
+  mostrarCarrinho: boolean = false
   ngAfterContentChecked(): void {
     this.carrinho = JSON.parse(localStorage.getItem("carrinho") || "")
     this.range = this.carrinho.length

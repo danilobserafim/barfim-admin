@@ -3,11 +3,19 @@
     <hr>
     <div id="produtos">
         <div class="tag-produto" *ngFor="let produto of produtos">
-            <h3>{{produto.nome_produto}}</h3>
-            <p>{{produto.descricao_produto}}</p>
-            <p>{{produto.valor_produto}}</p>
-            <p>{{produto.quantidade_produto}}</p>
-            <button (click)="addCarrinho(produto.id_produto, produto.nome_produto)">adicionar ao carrinho</button>
+            <div>
+                <h3>{{produto.nome_produto}}</h3>
+                <p>{{produto.descricao_produto}}</p>
+            </div>
+            <div>
+                <div id="inline">
+                    <p>R${{produto.valor_produto}}</p>
+                    <p>Quantidade: {{produto.quantidade_produto}}</p>
+                </div>
+                <button (click)="addCarrinho(produto.id_produto, produto.nome_produto)">adicionar ao carrinho</button>
+            </div>
         </div>
     </div>
+    <a [routerLink]="['cadastrar']" id="new"><img src="./assets/icon-plus-white.png" alt=""></a>
+
 </div>

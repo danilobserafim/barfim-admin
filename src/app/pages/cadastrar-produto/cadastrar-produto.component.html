@@ -1,0 +1,26 @@
+<div id="container">
+  <form (ngSubmit)="postProduto()" #formDir='ngForm'>
+    <h2>Cadastrar Produto</h2>
+
+    <label for="nome">nome</label>
+    <input type="text" name="nome" id="nome" placeholder="Nome" #name="ngModel" [(ngModel)]="produtoForm.nome"/>
+
+    <label for="descricao">Descrição</label>
+    <input type="text" name="descricao" id="descricao" placeholder="Descrição" #telefone="ngModel" [(ngModel)]="produtoForm.descricao" />
+
+    <label for="valor">Valor</label>
+    <input type="number" name="valor" id="valor" placeholder="Valor" #email="ngModel" [(ngModel)]="produtoForm.valor" />
+
+    <label for="categoria">Categorias</label>
+    <select name="categoria" id="categoria" #categoria="ngModel" [(ngModel)]="produtoForm.categoria" >
+      <option *ngFor="let categoria of categorias" value="{{categoria.id_categoria}}">{{categoria.nome_categoria}}</option>
+    </select>
+
+    <label for="quantidade">Quantidade</label>
+    <input type="number" name="quantidade" id="quantidade" placeholder="Quantidade" #email="ngModel" [(ngModel)]="produtoForm.quantidade" />
+
+    <input type="submit" value="Cadastrar">
+
+    <a routerLink="../">Cancelar</a>
+  </form>
+</div>

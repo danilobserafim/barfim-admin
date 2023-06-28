@@ -9,8 +9,6 @@ import { clienteModel } from './cliente.model';
   styleUrls: ['./modal-cadastrarcliente.component.scss'],
 })
 export class ModalCadastrarclienteComponent implements OnInit {
-  @Input() modal?: any;
-  @Input() toggleModal: any;
   clienteForm:clienteModel = new clienteModel("", "", "")
   constructor(private service: ClientesService) {}
   ngOnInit(): void {
