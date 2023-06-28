@@ -16,6 +16,7 @@ import { ModalCadastrarvendaComponent } from './pages/modal-cadastrarvenda/modal
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TitleComponent } from './components/title/title.component';
 import { LojaComponent } from './pages/loja/loja.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { LojaComponent } from './pages/loja/loja.component';
     LojaComponent,
   ],
   imports: [
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,

@@ -6,6 +6,7 @@ import { ClientesComponent } from './pages/clientes/clientes.component';
 import { VendaComponent } from './pages/venda/venda.component';
 import { ClienteComponent } from './pages/cliente/cliente.component';
 import { ModalCadastrarclienteComponent } from './pages/modal-cadastrarcliente/modal-cadastrarcliente.component';
+import { LojaComponent } from './pages/loja/loja.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,11 @@ const routes: Routes = [
   {
     path: 'clientes/:id',
     component: ClienteComponent
+
+  },
+  {
+    path: 'loja',
+    component: LojaComponent
 
   },
 ];
