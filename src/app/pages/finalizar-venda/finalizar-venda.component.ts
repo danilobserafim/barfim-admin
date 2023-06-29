@@ -38,19 +38,15 @@ export class FinalizarVendaComponent implements OnInit, AfterContentChecked {
   }
 
   submit(){
-    let carrinho:any = JSON.parse(localStorage.getItem("carrinho") || "");
-    let total:any = parseFloat(JSON.parse(localStorage.getItem("total") || ""));
-    let valorVenda = total;
-    total -= this.vendaForm.desconto 
-    let venda: any = {cliente_id: this.vendaForm.id_cliente, valor_venda: valorVenda, desconto: this.vendaForm.desconto, total: total, carrinho: carrinho}
-    this.lojaService.postVenda(venda).subscribe({
-      next:(data)=>{
-        console.log(data);
-        
+    let id_cliente: any = this.vendaForm.id_cliente
+    let desconto: any = this.vendaForm.desconto
+    console.log(id_cliente, desconto);
+    
+    this.lojaService.postVenda(id_cliente, desconto).subscribe({
+      next:()=>{alert("Deu certo");
+      localStorage.removeItem('carrinho')
       },
-      error:()=> {return}
+      error:()=>{alert("deu errado")}
     })
-    this.router.navigate(["/"])
-    localStorage.setItem("carrinho", "")
   }
 }

@@ -27,15 +27,17 @@ export class LojaService {
     return this.http.post<any>(`${base_URL}/produtos/`, body, options )
   }
 
-  postVenda(venda: any):Observable<any>{
+  postVenda(id_cliente:any, desconto:any):Observable<any>{
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")||"")
+    let total = JSON.parse(localStorage.getItem("total")||"")
 
     let options = {headers: {"content-type": "application/json; charset=utf-8", "access-control-allow-origin":"*"}}
-
-    let body = { cliente_id: venda.cliente_id, 
-                valor_venda: venda.valor_venda, 
-                desconto: venda.desconto, total: 
-                venda.total, carrinho: 
-                venda.carrinho }
+    let body = { cliente_id: id_cliente,
+                total: (total - desconto).toFixed(2),
+                desconto: desconto,
+                valor_venda: total,
+                carrinho: carrinho
+              }
 
     return this.http.post<any>(`${base_URL}/vendas/`, body, options )
   }
