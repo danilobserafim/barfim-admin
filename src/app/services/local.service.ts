@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { base_URL } from "../../../enviroment";
+
 
 @Injectable({
   providedIn: 'root'

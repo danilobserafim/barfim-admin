@@ -5,18 +5,15 @@
         <a routerLink="vendas">VENDAS</a>
         <a routerLink="clientes">CLIENTES</a>
     </nav>
-    <button id="carrinho" (click)="toggleCarrinho()"  *ngIf="carrinho[0]">
-        <img src="./assets/cart.png" alt="">
-        <p>{{range || 0}}</p>
-    </button>
-    <div id="itens" *ngIf="mostrarCarrinho && carrinho[0]">
-        <div *ngIf="!carrinho[0]">
-            <h2>Nada por aqui</h2>
-            <p>Comece a comprar agora</p>
-        </div>
+    <div id="itens" *ngIf="carrinho[0]">  
+        <p id="total" *ngIf="carrinho[0]">Total: {{total}}</p>
         <div class="tag" *ngFor="let item; let i = index of carrinho">
-            {{item.nome}}
-            <button (click)="removerDoCarrinho(i)">X</button>
+            <p>{{item.nome}}</p>
+            <div>
+                <p>{{item.valor}}</p>
+                <button (click)="removerDoCarrinho(i)"><img src="./assets/trash.png" alt=""></button>
+            </div>
         </div>
     </div>
+    <button (click)="finalizarCompra()" id="finalizar"  *ngIf="carrinho[0]">Finalizar compra</button>
 </div>

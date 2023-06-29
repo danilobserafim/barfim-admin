@@ -5,17 +5,19 @@
     flex-direction: column;
 #produtos{
     display: flex;
-
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 32px;
+    margin-left: 32px;    
     .tag-produto{
         padding: 16px;
+        width: 250px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        max-width: 250px;
-        margin: 16px;
         box-shadow: 0 4px 50px 1px rgba(128, 128, 128, 0.445);
         border-radius: 10px;
-      
+        height: 300px;
         #inline{
             display: flex;
             justify-content: space-between;

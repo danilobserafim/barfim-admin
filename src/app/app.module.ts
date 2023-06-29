@@ -18,6 +18,7 @@ import { TitleComponent } from './components/title/title.component';
 import { LojaComponent } from './pages/loja/loja.component';
 import { CommonModule } from '@angular/common';
 import { CadastrarProdutoComponent } from './pages/cadastrar-produto/cadastrar-produto.component';
+import { FinalizarVendaComponent } from './pages/finalizar-venda/finalizar-venda.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { CadastrarProdutoComponent } from './pages/cadastrar-produto/cadastrar-p
     TitleComponent,
     LojaComponent,
     CadastrarProdutoComponent,
+    FinalizarVendaComponent,
   ],
   imports: [
     CommonModule,

@@ -33,47 +33,23 @@
             color: white;
         }
     }
-    #carrinho{
-        border-radius: 100%;
-        position: absolute;
-        left: 32px;
-        bottom: 128px;
-        height: 63px;
-        width: 63px;
-        background-color: var(--secondaryColor);
-        border: none;
-        cursor: pointer;
-        &:hover #itens{
-            display: block;
-        }
-    img{
-        height: 32px;
-        width: 32px;
-        position: absolute;
-        bottom: -18px;
-        right: -16px;
-    }
-    p{
-        font-size: 1.5rem;
-        color: white;
-        font-weight: 700;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
-    }
     #itens{
         color: white;
         position: absolute;
-        bottom: 200px;
-        padding: 16px;
-        left: 32px;
+        bottom: 80px;
+        padding: 16px 8px;
+        left: 5%;
         border-radius: 4px;
-        width: 250px;
+        width: 90%;
         border: 1px solid rgb(160, 160, 160);
         background-color: var(--secondaryColor);
-        max-height: 40vh;
+        max-height: 60vh;
         overflow: scroll;
+        #total{
+            margin-bottom: 16px;
+            font-weight: 700;
+            
+        }
         &::-webkit-scrollbar {
             background-color: var(--secondaryColor);   
             width: 4px;
@@ -90,8 +66,12 @@
             align-items: center;
             justify-content: space-between;
             gap: 4px;
-            margin: 16px 0;
+            margin: 0 0 4px 0;
             color: aliceblue;
+            div{
+                display: flex;
+                align-items: center;
+            }
             button{
                 padding: 4px 6px;
                 cursor: pointer;
@@ -100,6 +80,13 @@
                 border-radius: 4px;
                 color: white;
                 opacity: 0.8;
+                margin: 0 0 0 8px;
+
+                img{
+                    padding: 0;
+                    margin: 0;
+                    width: 24px;
+                }
                 &:hover{
                 background-color: rgb(255, 85, 85);
 
@@ -107,6 +94,19 @@
                 }
             }
         }
+    }
+    #finalizar{
+        width: 90%;
+        padding: 8px;
+        border: none;
+        position: absolute;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-left: 5%;
+        background-color: var(--secondaryColor);
+        color: white;
+        bottom: 32px;
+        font-size: 1.2rem;
     }
     
 }

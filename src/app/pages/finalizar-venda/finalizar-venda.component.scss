@@ -1,0 +1,48 @@
+#container{
+    margin: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin-left: 316px;
+    margin: o auto;
+    hr{
+        margin: 16px 0;
+    }
+    > p{
+        width: 100%;
+        text-align: right;
+
+    }
+    .carrinho{
+        display: flex;
+        gap: 16px;
+        margin: 0 16px 4px 16px;
+        
+
+    }
+    form{
+        margin: 16px auto;
+        margin-top: 64px;
+        display: flex;
+        width: 600px;
+        gap: 16px;
+        flex-direction: column;
+        select, input{
+            padding: 8px;
+            border-radius: 4px;
+            width: 100%;
+        }
+        input{
+            border: none;
+            box-shadow: 1px 1px 3px gray;
+            &:focus{
+                outline:none;
+            }
+        }
+        input[type=submit]{
+            background: var(--mainColor);
+            color: white;
+            font-size: 1.3rem;
+        }
+    }
+}

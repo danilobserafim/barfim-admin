@@ -8,6 +8,7 @@ import { ClienteComponent } from './pages/cliente/cliente.component';
 import { ModalCadastrarclienteComponent } from './pages/modal-cadastrarcliente/modal-cadastrarcliente.component';
 import { LojaComponent } from './pages/loja/loja.component';
 import { CadastrarProdutoComponent } from './pages/cadastrar-produto/cadastrar-produto.component';
+import { FinalizarVendaComponent } from './pages/finalizar-venda/finalizar-venda.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,11 @@ const routes: Routes = [
   {
     path: 'loja/cadastrar',
     component: CadastrarProdutoComponent
+
+  },
+  {
+    path: 'loja/finalizarCompra',
+    component: FinalizarVendaComponent
 
   },
 ];

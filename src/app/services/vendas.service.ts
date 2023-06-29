@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { VendasData as VendasData } from '../models/vendasData';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { base_URL } from "../../../enviroment";
+
 
 
 @Injectable({
@@ -12,11 +14,11 @@ export class VendasService {
   
   constructor(private http: HttpClient) {}
   getVendas(): Observable<any> {
-    this.data = this.http.get(`https://backend-barfim-node.onrender.com/vendas`);
+    this.data = this.http.get(`${base_URL}/vendas`);
     return this.data;
   }
   getVenda(id:any): Observable<any>{
-    this.data = this.http.get(`https://backend-barfim-node.onrender.com/vendas/${id}`);
+    this.data = this.http.get(`${base_URL}/vendas/${id}`);
     return this.data;
   }
 }

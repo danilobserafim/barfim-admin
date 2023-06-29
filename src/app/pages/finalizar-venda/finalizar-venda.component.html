@@ -1,0 +1,20 @@
+<div id="container">
+    <app-title title="Finalizar venda" />
+    <div *ngFor="let item of carrinho" class="carrinho">
+        <p>{{item.nome}}</p>
+        <p>R$ {{item.valor}}</p>
+    </div>
+    <hr>
+    <p>Total: R$ {{total}}</p>
+    <form (ngSubmit)="submit()" #formDir='ngForm'>
+        <label for="desconto">Desconto</label>
+        <input type="number" name="desconto" id="desconto" placeholder="Desconto" #desconto [(ngModel)]="vendaForm.desconto" />
+
+        <select name="clientes" id="clientes" #id_cliente [(ngModel)]="vendaForm.id_cliente">
+            <option value="0">Clientes</option>
+            <option *ngFor="let cliente of clientes" value="{{cliente.id_cliente}}">{{cliente.nome}}</option>
+        </select>
+
+        <input type="submit" value="Finalizar venda">
+    </form>
+</div>

@@ -18,12 +18,17 @@ export class LojaComponent implements OnInit {
         },
       error:(err) => alert('Erro ao carregar os dados')
     })
-    
-
   }
-  addCarrinho(id: number, nome: string){
+  addCarrinho(id: number, nome: string, valor: number){
     let carrinho = JSON.parse(localStorage.getItem("carrinho") || "")
-    localStorage.setItem("carrinho", JSON.stringify([...carrinho, {id: id, nome: nome}]))
+    localStorage.setItem("carrinho", JSON.stringify([...carrinho, {id: id, nome: nome, valor: valor}]))
+    carrinho = JSON.parse(localStorage.getItem("carrinho") || "")
+
+    let total: number = 0; 
+    for (let index = 0; index < carrinho.length; index++) {
+       total += carrinho[index].valor;      
+    }
+       localStorage.setItem("total", JSON.stringify(total.toFixed(2)))      
   }
 
 }

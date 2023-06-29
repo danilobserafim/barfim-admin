@@ -22,6 +22,5 @@ back(){
       next:()=>{ window.history.back()},
       error:()=>{alert("cliente já cadastrado")}
     })
-     
   }
 }
