@@ -1,7 +1,7 @@
 <div id="main">
 <app-title title="Vendas"/>
     <a [routerLink]="[venda.id]" id="tag" *ngFor="let venda of dataVendas">
-                <p>{{venda.cliente}}</p>
+                <p>{{venda.cliente.toLowerCase()}}</p>
                 <p>{{venda.data}}</p>
                 <p>Valor: {{venda.valor}}</p>
                 <p>Desconto: {{venda.desconto}}</p>
