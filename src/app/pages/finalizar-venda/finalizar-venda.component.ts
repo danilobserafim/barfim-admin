@@ -38,13 +38,17 @@ export class FinalizarVendaComponent implements OnInit, AfterContentChecked {
   }
 
   submit(){
-    let id_cliente: any = this.vendaForm.id_cliente
-    let desconto: any = this.vendaForm.desconto
-    console.log(id_cliente, desconto);
+    let id_cliente: number = this.vendaForm.id_cliente
+    let desconto: number = this.vendaForm.desconto
     
     this.lojaService.postVenda(id_cliente, desconto).subscribe({
-      next:()=>{alert("Deu certo");
-      localStorage.removeItem('carrinho')
+      next: (data)=>{
+        this.lojaService.postCarrinho(data.insertId).subscribe({
+          next:()=>{}
+        })
+        localStorage.removeItem('carrinho')
+        alert("Deu certo")
+        this.router.navigate(["/"])
       },
       error:()=>{alert("deu errado")}
     })
