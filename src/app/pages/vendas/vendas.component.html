@@ -1,11 +1,19 @@
 <div id="main">
 <app-title title="Vendas"/>
-    <a [routerLink]="[venda.id]" id="tag" *ngFor="let venda of dataVendas">
-                <p>{{venda.cliente.toLowerCase()}}</p>
-                <p>{{venda.data}}</p>
-                <p>Valor: {{venda.valor}}</p>
-                <p>Desconto: {{venda.desconto}}</p>
-                <p>Total: {{venda.total}}</p>
+    <a id="tag" class="title " >
+        <p>ID_VENDA</p>
+        <p>CLIENTE</p>
+        <p>DATA</p>
+        <p id="valor">VALOR</p>
+        <p id="desconto">DESCONTO</p>
+        <p>TOTAL</p>
     </a>
-
+    <a [routerLink]="[venda.id]" id="tag" *ngFor="let venda of dataVendas">
+                <p># {{venda.id}}</p>
+                <p id="cliente">{{venda.cliente.toLowerCase()}}</p>
+                <p>{{venda.data}}</p>
+                <p id="valor">{{venda.valor.replace(".", ",")}}</p>
+                <p id="desconto">{{venda.desconto.replace(".", ",")}}</p>
+                <p id="total">R${{venda.total.toString().replace(".", ",")}}</p>
+    </a>
 </div>

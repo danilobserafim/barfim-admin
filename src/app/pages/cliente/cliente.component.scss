@@ -6,11 +6,8 @@
 }
 #main{
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 0 300px;
     padding: 64px 16px;
-
-
-
     hr{
         margin: 32px 0;
     }
@@ -58,5 +55,11 @@
         &:active{
             top: 1px;
         }
+    }
+}
+@media (max-width: 1000px) {
+    #main{
+        margin-left: 0;
+        padding: 88px 32px;
     }
 }

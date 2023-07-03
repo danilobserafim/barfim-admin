@@ -23,6 +23,7 @@
         }
         p{
             width: 30%;
+            text-align: center;
 
         }
         button{
@@ -58,5 +59,25 @@
         padding: 8px;
         width: 62px;
 
+    }
+}
+@media (max-width: 1000px) {
+    #main{
+        margin-left: 0;
+        .tag{
+            flex-direction: column;
+            p:first-child{
+                font-size: 1.3rem;
+                color: var(--mainColor);
+            }
+            p{
+                width: 100%;
+                text-align: left;
+            }
+        }
+        #new{
+            bottom: 30px;
+            right: 60px;
+        }
     }
 }

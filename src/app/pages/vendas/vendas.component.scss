@@ -17,7 +17,6 @@
     }
     #tag{
         padding: 16px 32px;
-        min-width: 200px;
         border-bottom: 1px solid rgba(128, 128, 128, 0.267);
         transition: 0.3s;
         border-radius: 10px;
@@ -26,14 +25,52 @@
             color: var(--mainColor);
             
         }
+
         p{
             width: 20%;
+            text-align: center;
         }
+    }
+    .title{
+        font-weight: 700;
+        color: black;
+
     }
 }
 @media (max-width: 1000px) {
     #main{
-        margin: 32px;
+        margin: 0;
         width: 100%;
+        padding: 32px 0;
+        #tag{
+            margin: 8px auto;
+            flex-wrap: wrap;
+            position: relative;
+            p{
+                width: 100%;
+                text-align: left;
+            }
+            &:nth-child(2){
+                display: none;
+            }
+            #cliente{
+                font-size: 1.5rem;
+                color: var(--mainColor);
+
+            }
+            #total{
+                position: absolute;
+                right: 32px;
+                width: auto;
+
+            }
+
+        }
+        #valor{
+            display: none;
+        }
+        #desconto{
+            display: none;
+        }
     }
 }

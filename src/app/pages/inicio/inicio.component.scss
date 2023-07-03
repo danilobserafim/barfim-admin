@@ -39,7 +39,11 @@
     color: var(--mainColor);
     font-weight: 600;
   }
-
+  #first-fold article #subtitle{
+    font-size: 1.2rem;
+            max-width: 80%;
+            color: var(--secondaryColor);
+  }
   
 #cards {
     display: flex;
@@ -167,3 +171,31 @@
     width: 48px;
     margin: 8px;
   }
+  @media (max-width:1000px) {
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #main{
+        margin: 0;
+        img{
+          display: none;
+      }
+      #first-fold article{
+        width: 100%;
+      }
+    }
+    #footer{
+      width: 100vw;
+      margin: 0;
+    }
+    #cards{
+      // width: 40vw;
+      // margin-left: 2vw;
+    }
+    .card{
+      width: 30vw;
+    }
+
+    
+}

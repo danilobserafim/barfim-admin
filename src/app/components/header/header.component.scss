@@ -10,6 +10,8 @@
     position: fixed;
     top: 0;
     height: 100vh;
+    z-index: 2;
+    
     img{
         width: 100px;
         margin: 32px;
@@ -112,7 +114,26 @@
 }
 @media (max-width:1000px) {
     #header{
-        display: none;
+        position: fixed;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        
+        nav{
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 8PX 0;
+        }
+    nav a{
+        padding: 8PX 16PX;
+        &:hover{
+        padding: 8PX 16PX;
+            color: var(--secondaryColor);
+            background-color: transparent;
+        }
     }
+}
     
 }

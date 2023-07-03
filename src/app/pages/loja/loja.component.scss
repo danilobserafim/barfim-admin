@@ -77,3 +77,27 @@
     }
 }
 }
+@media (max-width:1000px) {
+    #container{
+        margin: 0;
+        margin-top: 32px;
+        #new{
+            bottom: 30px;
+            right: 60px;
+        }
+    }
+}
+@media (max-width:1000px) {
+    #container{
+
+       #produtos{
+        flex-direction: column;
+        margin: 0;
+        padding: 0 16px;
+        .tag-produto{
+            width: 100%;
+
+        }
+       }
+    }
+}

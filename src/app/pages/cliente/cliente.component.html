@@ -9,7 +9,7 @@
 
         <div *ngFor="let compra of cliente.compras" class="tag">
             <a [routerLink]="['../../vendas', compra.venda_id]"  >
-                <p>{{compra.venda_id}} - {{compra.data}}</p>
+                <p>{{compra.data}}</p>
                 <p>{{compra.valor}}</p>
                 <p>-</p>
                 <p>{{compra.desconto}}</p>

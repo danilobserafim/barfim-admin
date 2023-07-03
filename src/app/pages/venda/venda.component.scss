@@ -1,9 +1,13 @@
 #container{
+    
     max-width: 1000px;
     margin: 0 auto;
+    margin-left: 350px;
     padding: 64px 16px;
     h3{
         margin-bottom: 16px;
+        font-size: 3rem;
+        font-family: serif;
     }
 
     button{
@@ -35,4 +39,11 @@
             color: black;
         }
     }
+}
+@media (max-width: 1000px) {
+    #container{
+        margin: 0 auto;
+        padding: 88px 32px;
+    }
+    
 }
