@@ -1,6 +1,11 @@
 <div id="container">
     <app-title title="Loja" />
-    <div id="produtos">
+    <select name="categoria" id="categoria" [(ngModel)]="this.categoriaSelecionada" (change)="this.mudaCategoria()">
+        <option value="0">Todos</option>
+        <option *ngFor="let categoria of categorias" value="{{categoria.id_categoria}}">{{categoria.nome_categoria}}</option>
+    </select>
+    <h2 *ngIf="!produtos[0].nome_produto">Nada encontrado</h2>
+    <div id="produtos" *ngIf="produtos[0]">
         <div class="tag-produto" *ngFor="let produto of produtos">
             <div>
                 <h3>{{produto.nome_produto}}</h3>
@@ -8,10 +13,11 @@
             </div>
             <div>
                 <div id="inline">
-                    <p>R${{produto.valor_produto}}</p>
+                    <p>R${{this.parseFloat(produto.valor_produto)}}</p>
                     <p>Quantidade: {{produto.quantidade_produto}}</p>
                 </div>
-                <button (click)="addCarrinho(produto.id_produto, produto.nome_produto, produto.valor_produto)"><img src="./assets/icon-plus-white.png" alt=""></button>
+                <button (click)="addCarrinho(produto.id_produto, produto.nome_produto, produto.valor_produto)" *ngIf="produto.quantidade_produto"><img src="./assets/icon-plus-white.png" alt=""></button>
+                <button disabled *ngIf="!produto.quantidade_produto" title="Estoque zerado"><img id="imgBtn" src="./assets/icon-plus-white.png" alt="" ></button>
             </div>
         </div>
     </div>

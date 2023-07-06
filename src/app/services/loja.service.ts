@@ -20,6 +20,9 @@ export class LojaService {
   getCategorias():Observable<any>{
     return this.http.get(`${base_URL}/categorias`)
   }
+  getCategoria(id:number):Observable<any>{
+    return this.http.get(`${base_URL}/categorias/${id}`)
+  }
 
   postPorduto(produto: {nome: string, descricao: string, valor: number, categoria: number, quantidade: number}):Observable<any>{
     let options = {headers: {"content-type": "application/json; charset=utf-8", "access-control-allow-origin":"*"}}

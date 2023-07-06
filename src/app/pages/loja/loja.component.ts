@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { LojaService } from 'src/app/services/loja.service';
 
 @Component({
@@ -6,15 +6,23 @@ import { LojaService } from 'src/app/services/loja.service';
   templateUrl: './loja.component.html',
   styleUrls: ['./loja.component.scss']
 })
-export class LojaComponent implements OnInit {
-  produtos:any = []
+export class LojaComponent implements OnInit, OnChanges {
+  produtos:any = [0]
+  categorias: any = []
+  categoriaSelecionada: any = 0
   constructor(private service: LojaService ) { }
+
+  ngOnChanges(): void {
+    this.mudaCategoria()
+  }
   ngOnInit(): void {
     this.getProdutos()
+    this.getCategorias()
   }
+
   getProdutos(){
     this.service.getPordutos().subscribe({
-      next: (data)=>  {this.produtos =  data
+      next: (data)=>  { this.produtos =  data
         }
     })
   }
@@ -28,6 +36,31 @@ export class LojaComponent implements OnInit {
        total += carrinho[index].valor;      
     }
        localStorage.setItem("total", JSON.stringify(total.toFixed(2)))      
+  }
+  parseFloat(data:string){
+    return parseFloat(data).toFixed(2)
+  }
+  getCategorias(){
+    this.service.getCategorias().subscribe({
+      next: data =>{
+        this.categorias = data
+      }
+    })
+  }
+  getCategoria(){
+    this.service.getCategoria(this.categoriaSelecionada).subscribe({
+      next: data =>{
+        this.produtos = data.produtos
+      },
+      error:(error)=>{this.produtos = [0]}
+    })
+  }
+  mudaCategoria(){
+    if (this.categoriaSelecionada == "0") {
+      this.getProdutos()
+    }else{
+      this.getCategoria()
+    }
   }
 
 }
