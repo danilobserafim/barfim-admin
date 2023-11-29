@@ -10,10 +10,11 @@
         <div class="tag" *ngFor="let item; let i = index of carrinho">
             <p>{{item.nome}}</p>
             <div>
-                <p>{{item.valor}}</p>
+                <p>{{this.parseFloat(item.valor)}}</p>
                 <button (click)="removerDoCarrinho(i)"><img src="./assets/trash.png" alt=""></button>
             </div>
         </div>
     </div>
-    <button (click)="finalizarCompra()" id="finalizar"  *ngIf="carrinho[0]">Finalizar compra</button>
+    <button (click)="finalizarCompra()" id="finalizarDesktop"  *ngIf="carrinho[0]">Finalizar compra</button>
+    <button (click)="finalizarCompra()"  id="finalizar"  *ngIf="carrinho[0]"><p>{{carrinho.length}}</p></button>
 </div>

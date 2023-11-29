@@ -7,7 +7,7 @@ import { LojaService } from 'src/app/services/loja.service';
   styleUrls: ['./loja.component.scss']
 })
 export class LojaComponent implements OnInit, OnChanges {
-  produtos:any = [0]
+  produtos:any = []
   categorias: any = []
   categoriaSelecionada: any = 0
   constructor(private service: LojaService ) { }
@@ -33,8 +33,11 @@ export class LojaComponent implements OnInit, OnChanges {
 
     let total: number = 0; 
     for (let index = 0; index < carrinho.length; index++) {
+      
        total += carrinho[index].valor;      
+       carrinho[index].valor = this.parseFloat(carrinho[index].valor)
     }
+
        localStorage.setItem("total", JSON.stringify(total.toFixed(2)))      
   }
   parseFloat(data:string){

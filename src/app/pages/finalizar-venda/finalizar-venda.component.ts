@@ -53,4 +53,15 @@ export class FinalizarVendaComponent implements OnInit, AfterContentChecked {
       error:()=>{alert("deu errado")}
     })
   }
+  removerDoCarrinho(index: number){
+    let total = 0
+    let carrinho = JSON.parse(localStorage.getItem("carrinho") || "")
+    this.carrinho.splice(index, 1)
+    localStorage.setItem('carrinho',JSON.stringify(this.carrinho))
+    carrinho = JSON.parse(localStorage.getItem("carrinho") || "")
+    for (let index = 0; index < carrinho.length; index++) {
+      total += carrinho[index].valor;      
+   }
+   localStorage.setItem("total", JSON.stringify(total.toFixed(2)))      
+  }
 }

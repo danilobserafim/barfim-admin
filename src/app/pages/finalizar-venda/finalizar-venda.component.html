@@ -1,8 +1,8 @@
 <div id="container">
     <app-title title="Finalizar venda" />
-    <div *ngFor="let item of carrinho" class="carrinho">
-        <p>{{item.nome}}</p>
-        <p>R$ {{item.valor}}</p>
+    <div *ngFor="let item; let i = index of carrinho" class="carrinho">
+        <p>{{item.nome}} - R$ {{item.valor}}</p>
+        <button (click)="removerDoCarrinho(i)"><img src="./assets/trash.png" alt="Imagem não encontrada"></button>
     </div>
     <hr>
     <p>Total: R$ {{total}}</p>

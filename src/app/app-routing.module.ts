@@ -23,23 +23,23 @@ const routes: Routes = [
 
   },
   {
-    path: 'clientes',
-    component: ClientesComponent
-
-  },
-  {
     path: 'vendas/:id',
     component: VendaComponent
 
   },
   {
-    path: 'clientes/cadastrar',
-    component: ModalCadastrarclienteComponent
+    path: 'clientes',
+    component: ClientesComponent
 
   },
   {
     path: 'clientes/:id',
     component: ClienteComponent
+
+  },
+  {
+    path: 'clientes/cadastrar',
+    component: ModalCadastrarclienteComponent
 
   },
   {

@@ -12,12 +12,12 @@
     <div id="item" *ngFor="let item of venda.carrinho">
         <h4>{{item.nome}}</h4>
         <p>{{item.descricao}}</p>
-        <p>{{item.valor}}</p>
+        <p>R$ {{item.valor}}</p>
     </div>
     <hr>
     <span>
-        <p>Valor <br>{{venda.venda}}</p>
-    <p>Desconto <br>{{venda.desconto}}</p>
-    <p>Total <br>{{venda.total}}</p>
+        <p>Valor <br>R$ {{venda.venda}}</p>
+    <p>Desconto <br>R$ {{venda.desconto}}</p>
+    <p>Total <br>R$ {{venda.total}}</p>
     </span>
 </div>

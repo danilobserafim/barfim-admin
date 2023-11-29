@@ -17,7 +17,17 @@
         display: flex;
         gap: 16px;
         margin: 0 16px 4px 16px;
-        
+        align-items: center;
+        button{
+            display: none;
+            background-color: rgba(128, 128, 128, 0.438);
+            cursor: pointer;
+            border: none;
+            &:hover{
+                background-color: red;
+
+            }
+        }
 
     }
     form{
@@ -45,4 +55,57 @@
             font-size: 1.3rem;
         }
     }
+}
+
+
+@media (max-width: 1000px) {
+    #container{
+        margin-left: 8px;
+        
+        hr{
+            
+        }
+        > p{
+           
+    
+        }
+        .carrinho{
+            justify-content: space-between;
+            button{
+                display: block;
+            }
+    
+        }
+        form{
+            
+            select, input{
+                
+            }
+            input{
+                
+            }
+            input[type=submit]{
+               
+            }
+        }
+    }
+    
+    
+
+
+
+
+
+
+    #container{
+        form{
+            margin: 16px auto;
+            margin-top: 64px;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+           
+        }
+    }
+    
 }

@@ -31,5 +31,8 @@ export class HeaderComponent implements AfterContentChecked {
   finalizarCompra(){
     this.router.navigate(['loja/finalizarCompra']);
   }
+  parseFloat(data:string){
+    return parseFloat(data).toFixed(2)
+  }
   
 }
