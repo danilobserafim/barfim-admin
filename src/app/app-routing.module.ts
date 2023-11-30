@@ -33,13 +33,13 @@ const routes: Routes = [
 
   },
   {
-    path: 'clientes/:id',
-    component: ClienteComponent
+    path: 'clientes/cadastrar',
+    component: ModalCadastrarclienteComponent
 
   },
   {
-    path: 'clientes/cadastrar',
-    component: ModalCadastrarclienteComponent
+    path: 'clientes/:id',
+    component: ClienteComponent
 
   },
   {
