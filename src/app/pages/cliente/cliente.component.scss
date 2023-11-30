@@ -39,16 +39,21 @@
     max-width: 600px;
     margin: 0 auto;
     margin-top: 64px;
-    button{
-        width: 100%;
-        padding: 8px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    h1{
+        margin-bottom: 32px;
+    }
+    a{
+        text-align: center;
+        padding: 8px 32px;
         font-size: 1.2rem;
-        margin-top: 32px;
         background-color: #008686;
         color: white;
         border: 1px solid transparent;
         cursor: pointer;
-        position: relative;
+        text-decoration: none;
         &:hover{
             filter: brightness(1.1);
         }
